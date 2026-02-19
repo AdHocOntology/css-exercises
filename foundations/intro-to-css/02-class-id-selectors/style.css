@@ -1,1 +1,22 @@
-/* Add CSS Styling */
+.odd,
+.spodd
+{
+    background-color: pink;
+    font-family: Verdana, "DejaVu Sans", sans-serif;
+}
+.spodd,
+#fourth
+{
+    font-size: 24px;
+}
+#second
+{
+    color: blue;
+    font-size: 36px;
+}
+#fourth
+{
+    background-color: lightgreen;
+    font-weight: bold;
+}
+
