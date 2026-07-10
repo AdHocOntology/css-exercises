@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .container {
@@ -17,6 +18,10 @@
 
 .header {
   background-color: #393f4d;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
 }
 
 .menu ul,
@@ -26,6 +31,11 @@
 
 .sidebar {
   background-color: #C50208;
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 50px;
 }
 
 .sidebar .photo {
@@ -54,7 +64,12 @@
 }
 
 .article {
+  grid-column: 2;
+  grid-row: 3 / 4;
   background-color: #bccbde;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .article p {
@@ -68,6 +83,7 @@
   background-color: #FFFFFF;
   color: black;
   text-align: center;
+  height: 200px;
 }
 
 .card p {
@@ -83,6 +99,8 @@
 
 .footer {
   background-color: #393f4d;
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
 }
 
 .footer p {
@@ -94,15 +112,8 @@
   display: grid;
   width: 100vw;
   height: 100vh;
-  grid-template:  2fr 1fr 5fr 1fr / 1fr 3fr;
-  gap: 1%;
-}
-
-.header{
-  grid-column: 1 / -1;
-  grid-row: 1 / 2;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template:  1fr 0.5fr 8fr 0.5fr / 1fr 4fr;
+  gap: 4px;
 }
 
 .logo{
@@ -115,25 +126,9 @@
 }
 
 .menu ul{
-  list-style: none;
-  padding: 0;
-  margin: 0;
   place-items: center; 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-.footer{
-  grid-column: 1 / -1;
-  grid-row: 4 / 5;
-}
-
-.sidebar{
-  grid-column: 1 / 2;
-  grid-row: 2 / 4;
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  gap: 5% 10%;
 }
 
 .sidebar div{
@@ -141,8 +136,7 @@
   place-items: center;
 }
 
-.article{
-  grid-column: 2;
-  grid-row: 3 / 4;
+.nav ul{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-
